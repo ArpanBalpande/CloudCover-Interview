@@ -26,4 +26,7 @@ for d in data:
     if d['name'][:4] == args.object_prefix:
         fileDate = datetime.strptime(d['creationTimestamp'][:10], '%Y-%m-%d')
         if ((todayDate-fileDate).days >= args.retention_days):
-            print("Deleting file", d['name'])
+            # print("Deleting file", d['name'])
+            print("File", d['name'], "is" ,(todayDate-fileDate).days, "days old. i.e Greater than the Retention days of", args.retention_days ,"Hence - Deleting")
+        else:
+            print("File", d['name'], "is" ,(todayDate-fileDate).days, "days old. i.e Lesser than the Retention days of", args.retention_days ,"Hence - Retaining")
