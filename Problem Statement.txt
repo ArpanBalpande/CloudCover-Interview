@@ -1,0 +1,27 @@
+Problem Statement : 
+Using the same supplied JSON file as above, write a script in a language of your choice that takes 3 parameters from the user:
+
+A number that represents how long the file should stay in the bucket, after which it is deleted. Let’s call this the number of “retention_days”
+
+A prefix string for object name
+
+Path to json file
+
+
+ Given the above inputs, your script should find the total number of images that are:
+
+older than the given retention_days (i.e. due for deletion)
+
+Match the given prefix_string
+
+
+The script should take three inputs:
+
+Path to the JSON file e.g: /Downloads/images.json
+
+Retention days	e.g: 30
+
+Prefix String		e.g: cc-r 
+
+
+Note:  (todays date - image creation date ) > = retention days
